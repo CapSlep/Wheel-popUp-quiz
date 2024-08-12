@@ -128,13 +128,11 @@ const imageBase = baseUrl ?? landingUrl;
   const modals = {
     welcome: {
       texts: {
-        header: "Thank you for participating in the survey!",
-        button: "Try your luck",
+        header: "Thank you for participating in our survey!",
+        button: "Choose a lucky gift box.",
         text: `
 <center>
-    To receive the McDonald's promotional menu, you need to choose the right gift box.
-    <br><br>
-    You have 3 attempts, good luck!
+    <br><br>You have 3 attempts, good luck!
 </center>
             `,
       },
