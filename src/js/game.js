@@ -62,8 +62,8 @@ const modalWin = () => {
     modalButtonOk.ariaLabel = texts.button;
     modalContent.appendChild(modalButtonOk);
     modalButtonOk.focus();
-    modalButtonOk.addEventListener("click", handlerClickOk);
-    // modalButtonOk.addEventListener("click", proceedWithoutCheckout);
+    // modalButtonOk.addEventListener("click", handlerClickOk);
+    modalButtonOk.addEventListener("click", proceedWithoutCheckout);
   };
   createImage();
   document.querySelector("#boxes").appendChild(modalSection);

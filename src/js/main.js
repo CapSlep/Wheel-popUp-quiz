@@ -528,7 +528,8 @@ const mainInit = () => {
 };
 
 setTimeout(() => {
-  if (getCookie("__is_checkout") != null) {
+  // if (getCookie("__is_checkout") != null) {
+  if (false) {
     // if (true) {
     openCheckout();
     checkoutInit();
