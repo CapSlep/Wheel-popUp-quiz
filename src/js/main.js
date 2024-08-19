@@ -328,6 +328,19 @@ const reviewsInit = () => {
     const starsEl = document.createElement("div");
     starsEl.classList.add("stars");
     makeStars(starsEl);
+    headerEl.appendChild(starsEl);
+
+    if (r?.avatar != null) {
+      const avatarWrapper = document.createElement("div");
+      avatarWrapper.classList.add("avatar__wrapper");
+      const avatarImg = document.createElement("img");
+      avatarImg.classList.add("avatar__img");
+      avatarImg.src = r.avatar;
+
+      avatarWrapper.appendChild(avatarImg);
+      headerEl.appendChild(avatarWrapper);
+    }
+
     const usernameEl = document.createElement("span");
     usernameEl.classList.add("review-username");
     usernameEl.style.marginLeft = "0.5rem";
@@ -335,7 +348,6 @@ const reviewsInit = () => {
     const timeEl = document.createElement("span");
     timeEl.innerText = r.time;
 
-    headerEl.appendChild(starsEl);
     headerEl.appendChild(usernameEl);
     headerEl.appendChild(timeEl);
 
