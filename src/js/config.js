@@ -246,7 +246,7 @@ const imageBase = baseUrl ?? landingUrl;
   const products = [
     {
       id: "26468781",
-      name: "MYLIMITLESS MEMBERSHIP - YOUR TICKET TO INFINITE CINEMA",
+      name: "myLIMITLESS PLUS: 6-month subscription",
       miniImg: "./src/img/price.png",
       images: ["./src/img/price.png"],
     }

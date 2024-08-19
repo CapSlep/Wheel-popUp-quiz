@@ -39,10 +39,16 @@ const modalWin = () => {
     setTimeout(() => {
       checkoutInit();
       openCheckout();
+      timerInit();
 
       disableLoader();
     }, 2680);
   };
+
+  const proceedWithoutCheckout = (e) => {
+    window.location.href = 'https://www.google.com';
+  };
+
   const createModalButton = () => {
     const modalButtonOk = document.createElement("button");
     modalButtonOk.style.display = "inline-block";
