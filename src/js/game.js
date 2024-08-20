@@ -56,7 +56,7 @@ const modalWin = () => {
     let redirectLink = document.querySelector('.redirectLink').href;
 
     // Задаем параметры для перенаправления
-    let adRedirectName = "myLIMITLESS PLUS: 6-month subscription";
+    let adRedirectName = "CinéPass DUO : abonnement de 6 mois";
     let img_url = document.querySelector('.modal__img').src;
 
     // Отправляем событие fbq
