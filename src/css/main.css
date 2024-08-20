@@ -2905,8 +2905,8 @@ button:not(:disabled) {
     max-width: -moz-fit-content;
     max-width: fit-content;
     width: 100%;
-    background: #0A1C3A;
-    color: #fff;
+    background: #FFC426;
+    color: #000;
   }
 }
 
@@ -2984,8 +2984,8 @@ video {
 
   .submit-shipping {
     margin-top: 1rem !important;
-    background: #0A1C3A;
-    color: #fff;
+    background: #FFC426;
+    color: #000;
     /*///////////*/
     font-weight: 900;
     /*  this does not work, go to index html and find "submitButton" there you can change it */
