@@ -1,6 +1,6 @@
 :root {
-  --main-color: #0A1C3A;
-  --button-text-color: #fff;
+  --main-color: #FFC426;
+  --button-text-color: #000;
 
 }
 
@@ -2115,7 +2115,7 @@ hr {
 .ratingbox {
   align-content: stretch;
   align-items: stretch;
-  background-color:#0A1C3A;
+  background-color: #DC7F37;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -3573,7 +3573,7 @@ video {
 }
 
 .logo-left {
-  height: 60px;
+  height: 75px;
   padding: 10px 0;
 }
 
@@ -3581,8 +3581,8 @@ video {
   align-items: center;
   justify-content: center;
   display: flex;
-  padding: 10px 0;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(1,12,44,1) 50%);
+  /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(1,12,44,1) 50%); */
+  background-color: #000;
 }
 
 .logo-right {
@@ -3727,8 +3727,8 @@ video {
 }
 
 .modal__button-start{
-  background: #0A1C3A; 
-  color: #fff;
+  background: var(--main-color); 
+  color: #000;
   border-radius: .5rem;
 }
 
@@ -3801,6 +3801,7 @@ video {
 
 .description__container h2{
   font-size: 2rem;
+  line-height: 2.1rem;
 }
 
 .description__container img{

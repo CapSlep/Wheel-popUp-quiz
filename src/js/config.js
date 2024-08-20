@@ -8,17 +8,17 @@ const landingUrl = baseHref + window.location.pathname;
 const imageBase = baseUrl ?? landingUrl;
 
 (function (exp) {
-  const countryCode = "gb";
-  const lang = "en-GB";
+  const countryCode = "fr";
+  const lang = "fr-FR";
   const locale = lang;
 
   const sizes = {
     enabled: false,
-    selectText: "Size: ",
+    selectText: "Taille : ",
     arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
   };
 
-  // I FILL THIS INFO IN MAIN.JS
+  // JE REMPLIS CES INFORMATIONS DANS MAIN.JS
   const mainProduct = {
     header: "",
     name: "",
@@ -26,145 +26,148 @@ const imageBase = baseUrl ?? landingUrl;
     newPrice: "",
     selectText: "",
     coupon: "",
-    timer: "This week, you can only order one product at a promotional price.",
+    timer: "Cette semaine, vous ne pouvez commander qu'un seul produit à un prix promotionnel.",
     text: `
-  Congratulations!<br><br>
-  You have participated in the Stanley promotion: you have the chance to purchase the STANLEY QUENCHER H2.0 thermos with an ice mold for only <b>£37</b>!
+  Félicitations !<br><br>
+  Vous avez participé à la promotion Stanley : vous avez la chance d'acheter le thermos STANLEY QUENCHER H2.0 avec moule à glace pour seulement <b>37$</b> !
   `,
   };
 
   const notifications = [
     {
       user: "Manuel S*****",
-      location: "London, United Kingdom",
-      action: "I just received the jewelry for £9.99!",
-      timeago: "15 seconds ago",
+      location: "Paris, France",
+      action: "Je viens de recevoir le bijou pour 9,99 euros !",
+      timeago: "il y a 15 secondes",
     },
     {
       user: "Carlos B******",
-      location: "Manchester, United Kingdom",
-      action: "I just received the jewelry for £9.99!",
-      timeago: "25 seconds ago",
+      location: "Lyon, France",
+      action: "Je viens de recevoir le bijou pour 9,99 euros !",
+      timeago: "il y a 25 secondes",
     },
   ];
 
   const reviewsArr = [
     {
-      name: "Oliver Thompson",
-      time: "1 day ago",
-      header: "This is amazing!",
-      product: "26468781",
-      review: "I'm very happy that I found this promotion. Thank you. My subscription was delivered within 5 days, I thought it would be faster.",
-      avatar: "./src/img/2.jpg",
+      name: "Olivier Dupont:",
+      time: "Il y a un jour",
+      header: "C'est incroyable !",
+      // product: "26468781",
+      avatar: './src/img/2.jpg',
+      review: "Je suis très content d'avoir trouvé cette promotion. Merci. Mon abonnement a été livré en 5 jours, je pensais que ce serait plus rapide.",
     },
     {
-      name: "Emily Harrington",
-      time: "2 days ago",
-      header: "Fantastic! I'm speechless.",
-      product: "26468783",
-      review: "At first, I didn't believe it and thought it was a scam. But my husband convinced me to try. Three days later, we received the subscription. We were lucky to win myLimitless Plus for 6 months.",
-      avatar: "./src/img/1.jpg",
+      name: "Émilie Martin:",
+      time: "Il y a deux jours",
+      header: "Fantastique ! Je n'ai pas de mots.",
+      // product: "26468783",
+      avatar: './src/img/1.jpg',
+      review: "Au début, je n'y croyais pas et je pensais que c'était une arnaque. Mais mon mari m'a convaincue d'essayer. Trois jours plus tard, nous avons reçu l'abonnement. Nous avons eu la chance de gagner Cinépass DUO pour 6 mois.",
     },
     {
-      name: "James Parker",
-      time: "2 days ago",
-      header: "Simply great.",
-      product: "26468784",
-      review: "Thank you for the 6-month subscription at such a price. It's truly an interesting promo. It works in all ODEON cinemas.",
-      avatar: "./src/img/3.jpg",
+      name: "Jean Parker:",
+      time: "Il y a deux jours",
+      header: "Simplement génial.",
+      // product: "26468784",
+      avatar: './src/img/3.jpg',
+      review: "Merci pour l'abonnement de 6 mois à un tel prix. C'est vraiment une promotion intéressante. Cela fonctionne dans tous les cinémas Pathé.",
     },
     {
-      name: "Sophie Bennett",
-      time: "4 days ago",
-      header: "I love it",
-      product: "26468781",
-      review: "I was slightly surprised by such a discount. But everything turned out well. I received my subscription and have already had the chance to use it.",
-      avatar: "./src/img/4.jpg",
+      name: "Sophie Bertrand:",
+      time: "Il y a quatre jours",
+      header: "J'aime",
+      // product: "26468781",
+      avatar: './src/img/4.jpg',
+      review: "J'ai été légèrement surprise par une telle réduction. Mais tout s'est bien passé. J'ai reçu mon abonnement et j'ai déjà pu en profiter.",
     },
     {
-      name: "William Turner",
-      time: "7 days ago",
-      header: "Wow, I love this product!",
-      product: "26468782",
-      review: "I received my subscription on the 6th day after placing the order. But I’m really happy to have gotten it at such a great price :)",
-      avatar: "./src/img/5.jpg",
+      name: "Guillaume Moreau:",
+      time: "Il y a sept jours",
+      header: "Wow, j'adore ce produit !",
+      // product: "26468782",
+      avatar: './src/img/5.jpg',
+      review: "J'ai reçu mon abonnement le 6e jour après avoir passé la commande. Mais je suis vraiment content de l'avoir obtenu à un prix si avantageux :)",
     },
   ];
 
   const reviews = {
     reviews: reviewsArr,
-    rr: "REVIEWS AND RATINGS",
+    rr: "AVIS ET ÉVALUATIONS",
     percent: "99%",
-    rec: "Comments on this promotion",
+    rec: "Commentaires sur cette promotion",
   };
 
   const questions = {
-    _of: "Question {1} of {2}: ",
+    _of: "Question {1} sur {2} : ",
     arr: [
       {
-        q: "Have you visited ODEON cinemas before?",
+        q: "Avez-vous déjà visité les cinémas Pathé ?",
         a: [
-          "Yes, I visit often",
-          "Yes, I visit rarely",
-          "I've never visited",
+          "Oui",
+          "Non",
         ],
       },
       {
-        q: "Have you ever used subscriptions for ODEON or other cinema brands?",
-        a: ["Yes",
-          "No"],
+        q: "Avez-vous déjà utilisé des abonnements pour Pathé ou d'autres marques de cinéma ?",
+        a: [
+          "Oui",
+          "Non",
+        ],
       },
       {
-        q: "Are you over 18 years old?",
-        a: ["Yes", "No"],
+        q: "Avez-vous plus de 18 ans ?",
+        a: ["Oui", "Non"],
       },
     ],
   };
 
   const check = {
-    title: "Your answer is being reviewed",
+    title: "Votre réponse sera examinée",
     arr: [
-      "You answered question 3 out of 3",
-      "Your IP address shows no previous orders",
-      "Your answer has been verified",
+      "Vous avez répondu à la question 3 sur 3",
+      "Votre adresse IP ne montre aucune commande précédente",
+      "Votre réponse a été vérifiée",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header: "Thank you for participating in our survey!",
-        button: "Choose a lucky gift box.",
+        header: "Merci d'avoir participé à notre enquête !",
+        button: "Tentez votre chance",
         text: `
 <center>
-    <br><br>You have 3 attempts, good luck!
+    Choisissez une boîte-cadeau chanceuse..
+    <br><br>
+    Vous avez 3 tentatives, bonne chance !
 </center>
             `,
       },
     },
     first: {
       texts: {
-        header: "Oh no...",
-        button: "Try again",
+        header: "Oh, non...",
+        button: "Réessayez",
         text: `
 <center>
-    Unfortunately, this gift is empty. You have two more attempts, good luck!
+    Malheureusement, ce cadeau est vide. Il vous reste deux tentatives, bonne chance !
 </center>
             `,
       },
     },
     win: {
       texts: {
-        header: "Congratulations! You're a lucky one!",
-        button: "Place Order",
+        header: "Félicitations ! Vous êtes chanceux(se) !",
+        button: "Passer la commande",
         text: `
 <center>
     <p style="color: #ffffff"></p>
     <br>
-    Click on the "Place Order" button, fill out the form, and pay for your order.
+    Cliquez sur le bouton "Passer la commande", remplissez le formulaire et payez votre commande.
     <br>
     <br>
-    Within 3–5 days, you will receive a package with your subscription card and instructions.
+    Sous 3 à 5 jours, vous recevrez un colis avec votre carte d'abonnement et des instructions.
 </center>
             `,
       },
@@ -173,80 +176,81 @@ const imageBase = baseUrl ?? landingUrl;
 
   const cartSteps = {
     personal: {
-      title: "Personal Information",
+      title: "Informations Personnelles",
       fields: {
         name: {
           enabled: true,
-          field: "First Name",
+          field: "Prénom",
         },
         family: {
           enabled: true,
-          field: "Last Name",
+          field: "Nom",
         },
         phone: {
           enabled: true,
-          field: "Phone Number",
+          field: "Numéro de téléphone",
         },
         email: {
           enabled: true,
-          field: "Email Address",
+          field: "Adresse e-mail",
         },
       },
     },
     delivery: {
-      title: "Delivery",
+      title: "Livraison",
       fields: {
         city: {
           enabled: true,
-          field: "City",
+          field: "Ville",
         },
         address: {
           enabled: true,
-          field: "Delivery Address",
+          field: "Adresse de livraison",
         },
         zip: {
           enabled: true,
-          field: "Postal Code",
+          field: "Code postal",
         },
       },
     },
     payment: {
-      title: "Payment Methods",
-      creditCard: "Online payment by credit card",
+      title: "Moyens de Paiement",
+      creditCard: "Paiement en ligne par carte de crédit",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Order Details",
-      oldPrice: "£96.00",
-      newPrice: "£9.99",
-      size: "Size",
+      title: "Détails de la Commande",
+      oldPrice: "37,90€",
+      newPrice: "9,99 €",
+      size: "Taille",
       subTotal: {
-        title: "Subtotal",
-        amount: "£9.99",
+        title: "Sous-total",
+        amount: "9,99 €",
       },
       deliveryTime: {
-        title: "Delivery Time",
-        amount: "3 days",
+        title: "Délai de livraison",
+        amount: "3 jours",
       },
       delivery: {
-        title: "Delivery",
-        amount: "£0.00",
+        title: "Livraison",
+        amount: "0,00 €",
       },
       total: {
         title: "Total",
-        amount: "£9.99",
+        amount: "9,99 €",
       },
-      checkoutButton: "Pay your order",
+      checkoutButton: "Payer votre commande",
     },
   };
+
 
   const products = [
     {
       id: "26468781",
-      name: "myLIMITLESS PLUS: 6-month subscription",
+      name: "CinéPass DUO : abonnement de 6 mois",
       miniImg: "./src/img/price.png",
       images: ["./src/img/price.png"],
     }
@@ -255,7 +259,6 @@ const imageBase = baseUrl ?? landingUrl;
   const footer = {
     cr: "© 2024, UEFA and Fanatics, Inc.",
   };
-
 
   const pathImgBox = {
     lid: "./src/img/box-lid.png",
