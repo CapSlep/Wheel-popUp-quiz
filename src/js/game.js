@@ -49,6 +49,40 @@ const modalWin = () => {
     window.location.href = 'https://www.google.com';
   };
 
+
+  function getUrl(event) {
+    event.preventDefault();
+    // Получаем ссылку перенаправления
+    let redirectLink = document.querySelector('.redirectLink').href;
+
+    // Задаем параметры для перенаправления
+    let adRedirectName = "myLIMITLESS PLUS: 6-month subscription";
+    let img_url = document.querySelector('.modal__img').src;
+
+    // Отправляем событие fbq
+    fbq('track', 'InitiateCheckout');
+
+    // Проверяем, есть ли уже параметры в ссылке
+    var separator = redirectLink.includes('?') ? '&' : '?';
+
+    // Перенаправляем с новыми параметрами
+    window.location.href = redirectLink + separator +
+      "adRedirectName=" + encodeURIComponent(adRedirectName) +
+      "&adRedirectImg=" + encodeURIComponent(img_url);
+  }
+
+  // // Получаем элемент кнопки по ID
+  // var myButton = document.getElementById('p_modal_button3');
+
+  // // Добавляем обработчик события click для кнопки
+  // myButton.addEventListener('click', function (event) {
+  //   // Останавливаем стандартное действие по умолчанию (перенаправление по ссылке)
+  //   event.preventDefault();
+
+  //   // Вызываем функцию getUrl для изменения URL и перенаправления
+  //   getUrl();
+  // });
+
   const createModalButton = () => {
     const modalButtonOk = document.createElement("button");
     modalButtonOk.style.display = "inline-block";
@@ -63,7 +97,7 @@ const modalWin = () => {
     modalContent.appendChild(modalButtonOk);
     modalButtonOk.focus();
     // modalButtonOk.addEventListener("click", handlerClickOk);
-    modalButtonOk.addEventListener("click", proceedWithoutCheckout);
+    modalButtonOk.addEventListener("click", getUrl);
   };
   createImage();
   document.querySelector("#boxes").appendChild(modalSection);
