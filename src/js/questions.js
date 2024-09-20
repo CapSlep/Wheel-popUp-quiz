@@ -63,6 +63,9 @@ const loaderInit = () => {
 
 const questionsInit = () => {
   const questionsEl = document.querySelector("#questions");
+  if (!questionsEl) {
+    return;
+  }
 
   if (window.innerWidth <= 768) {
     const hr2 = document.createElement("hr");

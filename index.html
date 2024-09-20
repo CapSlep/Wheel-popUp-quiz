@@ -70,7 +70,15 @@
         <img src="./src/img/checkout_header 3.png" alt="" class="checkImg" />
     </div>
     <a class="redirectLink" href="{offer}" style="display: none"></a>
+
     <div class="loader" style="display: flex">
+        <div class="loader__inner">
+            <img src="./src/img/loader.gif" alt="" class="loader_gif" />
+        </div>
+    </div>
+
+    <div class="loader__text" style="display: none">
+        <h2 class="section__title">Attendez. Nous vous envoyons au service de paiement!</h2>
         <div class="loader__inner">
             <img src="./src/img/loader.gif" alt="" class="loader_gif" />
         </div>
@@ -89,11 +97,15 @@
                     <img id="startImage">
 
                     <p class="modal__text modal__text-start">
-                        Dites oui au cinéma à volonté
+                        En raison de la diminution de 20% du flux de visiteurs dans les cinémas Pathé en France, nous
+                        avons décidé de faire un tirage au sort <b>de 1000 cartes CinéPass d'une durée de 3 mois, pour
+                            seulement 2 €.</b>
                         <br>
                         <br>
-                        Accédez à plus de 1000 films par an dans nos 73 cinémas Pathé et 50 cinémas partenaires grâce au
-                        CinéPass
+                        <b>Voyons si vous êtes chanceux!
+                            Vous n'avez que 3 tentatives.</b>
+
+
                     </p>
 
                     <!-- SWIPER -->
@@ -118,7 +130,7 @@
                     <!-- END SWIPER -->
 
                     <button type="button" class="button modal__button modal__button-ok modal__button-start"
-                        aria-label="Inténtalo de nuevo" id="modalExit">Tentez votre chance</button>
+                        aria-label="Inténtalo de nuevo" id="modalExit">PARTICIPER</button>
                 </div>
             </div>
         </section>
@@ -137,15 +149,22 @@
                 <img src="./src/img/land_image.png" alt="">
             </div>
             <div class="description__text">
-                Vous pouvez répondre à <b>3 courtes questions</b> et obtenir jusqu'à <b>74 %</b> de réduction sur l'un
-                des abonnements <b>CinéPass de 6 mois.</b>
-                <br>
-                <br>
-                Vos retours nous aideront à nous améliorer. Merci.
+                Essayez d'ouvrir la boîte chanceuse et obtenez la possibilité d'acheter un abonnement Pathé CinéPass de
+                3 mois pour seulement 2 € !
             </div>
         </div>
 
-        <div id="questions"></div>
+        <div class="features__container">
+            <ul class="features__list">
+                <li class="features__list-item">1 participant a 3 tentatives par semaine.</li>
+                <li class="features__list-item">La livraison de la carte est effectuée sous 3 à 5 jours.</li>
+                <li class="features__list-item">Livraison gratuite.</li>
+            </ul>
+        </div>
+
+        <button class="buy__button" id="buyButton-first">JE PARTICIPE</button>
+
+        <!-- <div id="questions"></div> -->
 
         <div class="ratingbox">
             <div class="rating">
@@ -153,11 +172,11 @@
                     <!-- <h2 id="ratingRr" class="h2rat"></h2> -->
                     <!-- <span id="ratingPercent" class="percentrat"></span> -->
 
-                    <img src="./src/img/logo.svg" alt="" style="padding-bottom: 20px; width: 200px" />
+                    <img src="./src/img/logo.svg" alt="" style="padding-bottom: 20px; width: 150px" />
 
                     <span id="ratingRecRat" class="recrat"></span>
 
-                    <div class="starsbox">
+                    <!-- <div class="starsbox">
                         <div id="stars" class="stars">
                             <div class="starsss">
                                 <div class="star">
@@ -203,15 +222,194 @@
                             </div>
                         </div>
                         <div class="starstext">4.91</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
-        <div id="reviews" class="reviews"></div>
+
+        <!-- <div id="reviews" class="reviews"> 
+        </div>-->
+
+        <section class="reviews__fb">
+            <div class="reviews__header-box">
+                <h2 class="reviews__header">Opinion</h2>
+                <div class="comment-form__body"><img src="./src/img/comments/unnamed.png" alt=""><textarea
+                        placeholder="Écrivez un commentaire..."></textarea><button disabled="">Poste</button>
+                    <div class="comment-form__icons"><img src="./src/img/comments/smile.png" alt=""><img
+                            src="./src/img/comments/camera.png" alt=""></div>
+                </div>
+            </div>
+            <div class="reviews__content">
+
+                <div class="comment__container  ">
+                    <div class="comment__avatar"><img src="./src/img/comments/av1.png" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Gabriel Martin</div>
+                        <div class="comment__text">Quelqu'un a-t-il ouvert la boîte chanceuse ? Pas moi 😥
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>31</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>7h</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+                <div class="comment__container  indent-one">
+                    <div class="comment__avatar"><img src="./src/img/comments/av2.png" alt="">
+                    </div>
+                    <div class="comment__content ">
+                        <div class="comment__name">Louise Dupont</div>
+                        <div class="comment__text">Je n'ai pas eu de chance non plus. Mais mon mari est un chanceux. Il
+                            a obtenu une réduction dès sa deuxième tentative...
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>12</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>3h</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+                <div class="comment__container  indent-one">
+                    <div class="comment__avatar"><img src="./src/img/comments/av3.png" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Emma Moreau</div>
+                        <div class="comment__text">Je vais essayer maintenant 😏
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>4</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>3h</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+                <div class="comment__container  indent-one">
+                    <div class="comment__avatar"><img src="./src/img/comments/av4.png" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Louis Bernard</div>
+                        <div class="comment__text">J'ai ouvert du premier coup 🎉 Vous pouvez me féliciter !
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>12</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>1h</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+                <div class="comment__container  ">
+                    <div class="comment__avatar"><img src="./src/img/comments/av5.png" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Jade Lefevre</div>
+                        <div class="comment__text">Merci beaucoup Pathé ! J'ai reçu ma carte dans les 5 jours suivant la
+                            commande.
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>6</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>1d</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+                <div class="comment__container  ">
+                    <div class="comment__avatar"><img src="./src/img/3.jpg" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Ambre Dubois</div>
+                        <div class="comment__text"> J'ai commandé un abonnement pour 2 euros. Mais j'ai un abonnement
+                            actif ce mois-ci, va-t-il disparaître ?
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>6</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>1d</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+                <div class="comment__container  indent-one">
+                    <div class="comment__avatar"><img src="./src/img/logo.svg" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Pathé CinéPass</div>
+                        <div class="comment__text"> Bonjour ! Non, votre abonnement actuel ne disparaîtra pas. Il sera
+                            gelé pendant la durée de l'abonnement promotionnel.
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>6</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>1d</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+
+                <div class="comment__container  ">
+                    <div class="comment__avatar"><img src="./src/img/2.jpg" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Raphaël Girard</div>
+                        <div class="comment__text"> Je n'ai encore pas eu de chance 😞
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>6</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>1d</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+
+                <div class="comment__container  ">
+                    <div class="comment__avatar"><img src="./src/img/4.jpg" alt="">
+                    </div>
+                    <div class="comment__content">
+                        <div class="comment__name">Alba Fontaine</div>
+                        <div class="comment__text"> Hourra ! J'ai eu de la chance 👍👍👍
+                        </div>
+                        <ul class="comment__actions"><span><img src="./src/img/comments/like.png"
+                                    alt=""></span><span><img src="./src/img/comments/love.png" alt=""></span><span><img
+                                    src="./src/img/comments/smile.svg" alt=""></span>
+                            <div>6</div>
+                        </ul>
+                    </div>
+                    <div class="comment__time"><span>1d</span><span>moi
+                            comme</span><span>commentaire</span></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <button class="buy__button" id="buyButton-first">JE PARTICIPE</button>
     </section>
 
     <section style="display: none" id="game">
-        <main id="boxes" class="page page__container"></main>
+        <main id="boxes" class="page page__container">
+            <h2 style="display: none" id="game-title" class="section__title">Vous avez 3 tentatives. Bonne chance !</h2>
+        </main>
     </section>
 
     <section style="display: none" id="checkout">
@@ -570,26 +768,31 @@
 
         </div>
     </section>
-    <!-- <div>
-  <img src="./assets/footer_img.png" alt="">
-</div> -->
 
     <footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"
-            integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- <script src="src/intlTelInput.min.js.Без названия"></script> -->
-        <script src="src/js/imask.js"></script>
-        <script src="src/js/config.js"></script>
-        <script src="src/js/checkout.js"></script>
-        <script src="src/js/game.js"></script>
-        <script src="src/js/questions.js"></script>
-        <script defer src="src/js/wheel.js"></script>
-        <script defer src="src/js/timer.js"></script>
-        <script src="src/js/main.js"></script>
+        <div class="footer__wrapper">
+            <img src="./src/img/logo.svg" alt="">
+            <p class="footer__text">
+                Pathé Cinémas Services © 2024 Tous droits réservés ®
+            </p>
+        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"
+        integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="src/intlTelInput.min.js.Без названия"></script> -->
+    <script src="src/js/imask.js"></script>
+    <script src="src/js/config.js"></script>
+    <script src="src/js/checkout.js"></script>
+    <script src="src/js/game.js"></script>
+    <script src="src/js/questions.js"></script>
+    <script defer src="src/js/wheel.js"></script>
+    <script defer src="src/js/timer.js"></script>
+    <script src="src/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

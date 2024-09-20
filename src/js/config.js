@@ -7,160 +7,161 @@ const baseHref = window.location.protocol + "//" + window.location.host;
 const landingUrl = baseHref + window.location.pathname;
 const imageBase = baseUrl ?? landingUrl;
 
-(function (exp) {
-  const countryCode = "fr";
-  const lang = "fr-FR";
-  const locale = lang;
+(
+  function (exp) {
+    const countryCode = "fr";
+    const lang = "fr-FR";
+    const locale = lang;
 
-  const sizes = {
-    enabled: false,
-    selectText: "Taille : ",
-    arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
-  };
+    const sizes = {
+      enabled: false,
+      selectText: "Taille : ",
+      arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
+    };
 
-  // JE REMPLIS CES INFORMATIONS DANS MAIN.JS
-  const mainProduct = {
-    header: "",
-    name: "",
-    oldPrice: "",
-    newPrice: "",
-    selectText: "",
-    coupon: "",
-    timer: "Cette semaine, vous ne pouvez commander qu'un seul produit à un prix promotionnel.",
-    text: `
+    // JE REMPLIS CES INFORMATIONS DANS MAIN.JS
+    const mainProduct = {
+      header: "",
+      name: "",
+      oldPrice: "",
+      newPrice: "",
+      selectText: "",
+      coupon: "",
+      timer: "Cette semaine, vous ne pouvez commander qu'un seul produit à un prix promotionnel.",
+      text: `
   Félicitations !<br><br>
   Vous avez participé à la promotion Stanley : vous avez la chance d'acheter le thermos STANLEY QUENCHER H2.0 avec moule à glace pour seulement <b>37$</b> !
   `,
-  };
+    };
 
-  const notifications = [
-    {
-      user: "Manuel S*****",
-      location: "Paris, France",
-      action: "Je viens de recevoir le bijou pour 9,99 euros !",
-      timeago: "il y a 15 secondes",
-    },
-    {
-      user: "Carlos B******",
-      location: "Lyon, France",
-      action: "Je viens de recevoir le bijou pour 9,99 euros !",
-      timeago: "il y a 25 secondes",
-    },
-  ];
-
-  const reviewsArr = [
-    {
-      name: "Olivier Dupont:",
-      time: "Il y a un jour",
-      header: "C'est incroyable !",
-      // product: "26468781",
-      avatar: './src/img/2.jpg',
-      review: "Je suis très content d'avoir trouvé cette promotion. Merci. Mon abonnement a été livré en 5 jours, je pensais que ce serait plus rapide.",
-    },
-    {
-      name: "Émilie Martin:",
-      time: "Il y a deux jours",
-      header: "Fantastique ! Je n'ai pas de mots.",
-      // product: "26468783",
-      avatar: './src/img/1.jpg',
-      review: "Au début, je n'y croyais pas et je pensais que c'était une arnaque. Mais mon mari m'a convaincue d'essayer. Trois jours plus tard, nous avons reçu l'abonnement. Nous avons eu la chance de gagner Cinépass DUO pour 6 mois.",
-    },
-    {
-      name: "Jean Parker:",
-      time: "Il y a deux jours",
-      header: "Simplement génial.",
-      // product: "26468784",
-      avatar: './src/img/3.jpg',
-      review: "Merci pour l'abonnement de 6 mois à un tel prix. C'est vraiment une promotion intéressante. Cela fonctionne dans tous les cinémas Pathé.",
-    },
-    {
-      name: "Sophie Bertrand:",
-      time: "Il y a quatre jours",
-      header: "J'aime",
-      // product: "26468781",
-      avatar: './src/img/4.jpg',
-      review: "J'ai été légèrement surprise par une telle réduction. Mais tout s'est bien passé. J'ai reçu mon abonnement et j'ai déjà pu en profiter.",
-    },
-    {
-      name: "Guillaume Moreau:",
-      time: "Il y a sept jours",
-      header: "Wow, j'adore ce produit !",
-      // product: "26468782",
-      avatar: './src/img/5.jpg',
-      review: "J'ai reçu mon abonnement le 6e jour après avoir passé la commande. Mais je suis vraiment content de l'avoir obtenu à un prix si avantageux :)",
-    },
-  ];
-
-  const reviews = {
-    reviews: reviewsArr,
-    rr: "AVIS ET ÉVALUATIONS",
-    percent: "99%",
-    rec: "Commentaires sur cette promotion",
-  };
-
-  const questions = {
-    _of: "Question {1} sur {2} : ",
-    arr: [
+    const notifications = [
       {
-        q: "Avez-vous déjà visité les cinémas Pathé ?",
-        a: [
-          "Oui",
-          "Non",
-        ],
+        user: "Manuel S*****",
+        location: "Paris, France",
+        action: "Je viens de recevoir le bijou pour 9,99 euros !",
+        timeago: "il y a 15 secondes",
       },
       {
-        q: "Avez-vous déjà utilisé des abonnements pour Pathé ou d'autres marques de cinéma ?",
-        a: [
-          "Oui",
-          "Non",
-        ],
+        user: "Carlos B******",
+        location: "Lyon, France",
+        action: "Je viens de recevoir le bijou pour 9,99 euros !",
+        timeago: "il y a 25 secondes",
+      },
+    ];
+
+    const reviewsArr = [
+      {
+        name: "Olivier Dupont:",
+        time: "Il y a un jour",
+        header: "C'est incroyable !",
+        // product: "26468781",
+        avatar: './src/img/2.jpg',
+        review: "Je suis très content d'avoir trouvé cette promotion. Merci. Mon abonnement a été livré en 5 jours, je pensais que ce serait plus rapide.",
       },
       {
-        q: "Avez-vous plus de 18 ans ?",
-        a: ["Oui", "Non"],
+        name: "Émilie Martin:",
+        time: "Il y a deux jours",
+        header: "Fantastique ! Je n'ai pas de mots.",
+        // product: "26468783",
+        avatar: './src/img/1.jpg',
+        review: "Au début, je n'y croyais pas et je pensais que c'était une arnaque. Mais mon mari m'a convaincue d'essayer. Trois jours plus tard, nous avons reçu l'abonnement. Nous avons eu la chance de gagner Cinépass DUO pour 6 mois.",
       },
-    ],
-  };
+      {
+        name: "Jean Parker:",
+        time: "Il y a deux jours",
+        header: "Simplement génial.",
+        // product: "26468784",
+        avatar: './src/img/3.jpg',
+        review: "Merci pour l'abonnement de 6 mois à un tel prix. C'est vraiment une promotion intéressante. Cela fonctionne dans tous les cinémas Pathé.",
+      },
+      {
+        name: "Sophie Bertrand:",
+        time: "Il y a quatre jours",
+        header: "J'aime",
+        // product: "26468781",
+        avatar: './src/img/4.jpg',
+        review: "J'ai été légèrement surprise par une telle réduction. Mais tout s'est bien passé. J'ai reçu mon abonnement et j'ai déjà pu en profiter.",
+      },
+      {
+        name: "Guillaume Moreau:",
+        time: "Il y a sept jours",
+        header: "Wow, j'adore ce produit !",
+        // product: "26468782",
+        avatar: './src/img/5.jpg',
+        review: "J'ai reçu mon abonnement le 6e jour après avoir passé la commande. Mais je suis vraiment content de l'avoir obtenu à un prix si avantageux :)",
+      },
+    ];
 
-  const check = {
-    title: "Votre réponse sera examinée",
-    arr: [
-      "Vous avez répondu à la question 3 sur 3",
-      "Votre adresse IP ne montre aucune commande précédente",
-      "Votre réponse a été vérifiée",
-    ],
-  };
+    const reviews = {
+      reviews: reviewsArr,
+      rr: "AVIS ET ÉVALUATIONS",
+      percent: "99%",
+      rec: "Si vous avez déjà un abonnement CinéPass actif, la durée de votre abonnement sera gelée pendant la durée de l'offre promotionnelle et sera prolongée.",
+    };
 
-  const modals = {
-    welcome: {
-      texts: {
-        header: "Merci d'avoir participé à notre enquête !",
-        button: "Tentez votre chance",
-        text: `
+    const questions = {
+      _of: "Question {1} sur {2} : ",
+      arr: [
+        {
+          q: "Avez-vous déjà visité les cinémas Pathé ?",
+          a: [
+            "Oui",
+            "Non",
+          ],
+        },
+        {
+          q: "Avez-vous déjà utilisé des abonnements pour Pathé ou d'autres marques de cinéma ?",
+          a: [
+            "Oui",
+            "Non",
+          ],
+        },
+        {
+          q: "Avez-vous plus de 18 ans ?",
+          a: ["Oui", "Non"],
+        },
+      ],
+    };
+
+    const check = {
+      title: "Votre réponse sera examinée",
+      arr: [
+        "Vous avez répondu à la question 3 sur 3",
+        "Votre adresse IP ne montre aucune commande précédente",
+        "Votre réponse a été vérifiée",
+      ],
+    };
+
+    const modals = {
+      welcome: {
+        texts: {
+          header: "Merci d'avoir participé à notre enquête !",
+          button: "Tentez votre chance",
+          text: `
 <center>
     Choisissez une boîte-cadeau chanceuse..
     <br><br>
     Vous avez 3 tentatives, bonne chance !
 </center>
             `,
+        },
       },
-    },
-    first: {
-      texts: {
-        header: "Oh, non...",
-        button: "Réessayez",
-        text: `
+      first: {
+        texts: {
+          header: "Oh, non...",
+          button: "Réessayez",
+          text: `
 <center>
     Malheureusement, ce cadeau est vide. Il vous reste deux tentatives, bonne chance !
 </center>
             `,
+        },
       },
-    },
-    win: {
-      texts: {
-        header: "Félicitations ! Vous êtes chanceux(se) !",
-        button: "Passer la commande",
-        text: `
+      win: {
+        texts: {
+          header: "Félicitations ! Vous êtes chanceux(se) !",
+          button: "Passer la commande",
+          text: `
 <center>
     <p style="color: #ffffff"></p>
     <br>
@@ -170,122 +171,122 @@ const imageBase = baseUrl ?? landingUrl;
     Sous 3 à 5 jours, vous recevrez un colis avec votre carte d'abonnement et des instructions.
 </center>
             `,
+        },
       },
-    },
-  };
+    };
 
-  const cartSteps = {
-    personal: {
-      title: "Informations Personnelles",
-      fields: {
-        name: {
-          enabled: true,
-          field: "Prénom",
+    const cartSteps = {
+      personal: {
+        title: "Informations Personnelles",
+        fields: {
+          name: {
+            enabled: true,
+            field: "Prénom",
+          },
+          family: {
+            enabled: true,
+            field: "Nom",
+          },
+          phone: {
+            enabled: true,
+            field: "Numéro de téléphone",
+          },
+          email: {
+            enabled: true,
+            field: "Adresse e-mail",
+          },
         },
-        family: {
-          enabled: true,
-          field: "Nom",
-        },
-        phone: {
-          enabled: true,
-          field: "Numéro de téléphone",
-        },
-        email: {
-          enabled: true,
-          field: "Adresse e-mail",
-        },
-      },
-    },
-    delivery: {
-      title: "Livraison",
-      fields: {
-        city: {
-          enabled: true,
-          field: "Ville",
-        },
-        address: {
-          enabled: true,
-          field: "Adresse de livraison",
-        },
-        zip: {
-          enabled: true,
-          field: "Code postal",
-        },
-      },
-    },
-    payment: {
-      title: "Moyens de Paiement",
-      creditCard: "Paiement en ligne par carte de crédit",
-    },
-  };
-
-  const cart = {
-    steps: cartSteps,
-    main: {
-      title: "Détails de la Commande",
-      oldPrice: "37,90€",
-      newPrice: "9,99 €",
-      size: "Taille",
-      subTotal: {
-        title: "Sous-total",
-        amount: "9,99 €",
-      },
-      deliveryTime: {
-        title: "Délai de livraison",
-        amount: "3 jours",
       },
       delivery: {
         title: "Livraison",
-        amount: "0,00 €",
+        fields: {
+          city: {
+            enabled: true,
+            field: "Ville",
+          },
+          address: {
+            enabled: true,
+            field: "Adresse de livraison",
+          },
+          zip: {
+            enabled: true,
+            field: "Code postal",
+          },
+        },
       },
-      total: {
-        title: "Total",
-        amount: "9,99 €",
+      payment: {
+        title: "Moyens de Paiement",
+        creditCard: "Paiement en ligne par carte de crédit",
       },
-      checkoutButton: "Payer votre commande",
-    },
-  };
+    };
+
+    const cart = {
+      steps: cartSteps,
+      main: {
+        title: "Détails de la Commande",
+        oldPrice: "37,90€",
+        newPrice: "9,99 €",
+        size: "Taille",
+        subTotal: {
+          title: "Sous-total",
+          amount: "9,99 €",
+        },
+        deliveryTime: {
+          title: "Délai de livraison",
+          amount: "3 jours",
+        },
+        delivery: {
+          title: "Livraison",
+          amount: "0,00 €",
+        },
+        total: {
+          title: "Total",
+          amount: "9,99 €",
+        },
+        checkoutButton: "Payer votre commande",
+      },
+    };
 
 
-  const products = [
-    {
-      id: "26468781",
-      name: "CinéPass DUO : abonnement de 6 mois",
-      miniImg: "./src/img/price.png",
-      images: ["./src/img/price.png"],
-    }
-  ];
+    const products = [
+      {
+        id: "26468781",
+        name: "CinéPass DUO : abonnement de 6 mois",
+        miniImg: "./src/img/price.png",
+        images: ["./src/img/price.png"],
+      }
+    ];
 
-  const footer = {
-    cr: "© 2024, UEFA and Fanatics, Inc.",
-  };
+    const footer = {
+      cr: "© 2024, UEFA and Fanatics, Inc.",
+    };
 
-  const pathImgBox = {
-    lid: "./src/img/box-lid.png",
-    lidIOs: "./src/img/box-lid-ios.png",
-    inner: "./src/img/box-inner.png",
-    innerGift: "./src/img/box-inner-gift.png",
-    box: "./src/img/box.png",
-    boxModal: "./src/img/box-modal.png",
-  };
+    const pathImgBox = {
+      lid: "./src/img/box-lid.png",
+      lidIOs: "./src/img/box-lid-ios.png",
+      inner: "./src/img/box-inner.png",
+      innerGift: "./src/img/box-inner-gift.png",
+      box: "./src/img/box.png",
+      boxModal: "./src/img/box-modal.png",
+    };
 
-  exp.__config = {
-    pathImgBox,
-    countryCode,
-    lang,
-    locale,
-    mainProduct,
-    footer,
-    check,
-    questions,
-    modals,
-    cart,
-    reviews,
-    products,
-    sizes,
-    notifications,
-  };
-})(window);
+    exp.__config = {
+      pathImgBox,
+      countryCode,
+      lang,
+      locale,
+      mainProduct,
+      footer,
+      check,
+      questions,
+      modals,
+      cart,
+      reviews,
+      products,
+      sizes,
+      notifications,
+    };
+  })(window);
 
 const siteKey = "cinepass-fr";
 
@@ -427,6 +428,15 @@ const enableLoader = () => {
 };
 const disableLoader = () => {
   const loader = document.querySelector(".loader");
+  loader.setAttribute("style", "display: none");
+};
+
+const enableFinalLoader = () => {
+  const loader = document.querySelector(".loader__text");
+  loader.setAttribute("style", "display: flex");
+};
+const disableFinalLoader = () => {
+  const loader = document.querySelector(".loader__text");
   loader.setAttribute("style", "display: none");
 };
 

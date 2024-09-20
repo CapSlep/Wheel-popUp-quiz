@@ -304,7 +304,7 @@ const makeStars = (el) => {
 
 const ratingInit = () => {
   const starsEl = document.querySelector("#stars");
-  makeStars(starsEl);
+  // makeStars(starsEl);
 
   const rrEl = document.querySelector("#ratingRr");
   //const percentEl = document.querySelector("#ratingPercent");
@@ -327,7 +327,7 @@ const reviewsInit = () => {
     headerEl.style.display = "flex";
     const starsEl = document.createElement("div");
     starsEl.classList.add("stars");
-    makeStars(starsEl);
+    // makeStars(starsEl);
     headerEl.appendChild(starsEl);
 
     if (r?.avatar != null) {
@@ -523,7 +523,7 @@ const mainInit = () => {
 
   questionsInit();
   ratingInit();
-  reviewsInit();
+  // reviewsInit();
   //notificationsInit();
 };
 
@@ -542,12 +542,33 @@ setTimeout(() => {
     modalStartInit();
     notificationsInit();
     ratingInit();
-    reviewsInit();
+    // reviewsInit();
   }
   disableLoader();
 }, 2680);
 
 window.onload = () => {
+
+  const buyButtonsFirst = document.querySelectorAll("#buyButton-first");
+  buyButtonsFirst.forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      enableLoader();
+      closeMain();
+      openGame();
+      checkoutInit();
+      setTimeout(() => {
+        startGame();
+        // openCheckout();
+        disableLoader();
+      }, 2680);
+      return;
+
+    });
+  });
+
+
   if (localStorage.filled_form) {
     let arr = JSON.parse(localStorage.filled_form);
     arr.forEach(el => {
@@ -620,7 +641,7 @@ window.onload = () => {
       localStorage.setItem('filled_form', JSON.stringify(arr));
 
       closeCheckout();
-      enableLoader();
+      enableFinalLoader();
       window.location.href = constructedLink;
 
       console.log('Form submitted successfully!', constructedLink);

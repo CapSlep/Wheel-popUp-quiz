@@ -33,55 +33,44 @@ const modalWin = () => {
     modalText.innerHTML = text;
     modalContent.append(modalText);
   };
+
+  const useForm = false;
+
   const handlerClickOk = (e) => {
+
+
     closeGame();
-    enableLoader();
-    setTimeout(() => {
-      checkoutInit();
-      openCheckout();
-      timerInit();
+    enableFinalLoader();
+    checkoutInit();
+    if (useForm) {
+      setTimeout(() => {
+        openCheckout();
+        timerInit();
 
-      disableLoader();
-    }, 2680);
+        disableLoader();
+      }, 2680);
+    } else {
+
+      // Получаем ссылку перенаправления
+      let redirectLink = document.querySelector('.redirectLink').href;
+
+      // Задаем параметры для перенаправления
+      let adRedirectName = document.getElementById('checkoutOfferName').innerText;
+      let img_url = checkoutCurrentPhoto.checkoutCurrentPhoto.src;
+
+      // Отправляем событие fbq
+      fbq('track', 'InitiateCheckout');
+
+      // Проверяем, есть ли уже параметры в ссылке
+      var separator = redirectLink.includes('?') ? '&' : '?';
+
+      // Перенаправляем с новыми параметрами
+      window.location.href = redirectLink + separator +
+        "adRedirectName=" + encodeURIComponent(adRedirectName) +
+        "&adRedirectImg=" + encodeURIComponent(img_url);
+    }
   };
 
-  const proceedWithoutCheckout = (e) => {
-    window.location.href = 'https://www.google.com';
-  };
-
-
-  function getUrl(event) {
-    event.preventDefault();
-    // Получаем ссылку перенаправления
-    let redirectLink = document.querySelector('.redirectLink').href;
-
-    // Задаем параметры для перенаправления
-    let adRedirectName = "CinéPass DUO : abonnement de 6 mois";
-    let img_url = document.querySelector('.modal__img').src;
-
-    // Отправляем событие fbq
-    fbq('track', 'InitiateCheckout');
-
-    // Проверяем, есть ли уже параметры в ссылке
-    var separator = redirectLink.includes('?') ? '&' : '?';
-
-    // Перенаправляем с новыми параметрами
-    window.location.href = redirectLink + separator +
-      "adRedirectName=" + encodeURIComponent(adRedirectName) +
-      "&adRedirectImg=" + encodeURIComponent(img_url);
-  }
-
-  // // Получаем элемент кнопки по ID
-  // var myButton = document.getElementById('p_modal_button3');
-
-  // // Добавляем обработчик события click для кнопки
-  // myButton.addEventListener('click', function (event) {
-  //   // Останавливаем стандартное действие по умолчанию (перенаправление по ссылке)
-  //   event.preventDefault();
-
-  //   // Вызываем функцию getUrl для изменения URL и перенаправления
-  //   getUrl();
-  // });
 
   const createModalButton = () => {
     const modalButtonOk = document.createElement("button");
@@ -214,6 +203,7 @@ const game = () => {
   };
   boxesWrapper.addEventListener("click", openBox);
   document.querySelector("#boxes").appendChild(boxesWrapper);
+  document.querySelector('#game-title').setAttribute("style", "display: block");
 };
 const pathImg = pathImgBox.boxModal;
 const modalGift = () => {
@@ -273,4 +263,5 @@ const modalGift = () => {
   createModalButton();
 };
 
-const startGame = () => modalGift();
+// const startGame = () => modalGift();
+const startGame = () => game();
