@@ -8,7 +8,7 @@ const spin = () => {
 			name: 'duo',
 			fromTo: [0, 0.33],
 			rotate: '3364',
-			img: './src/img/price.png',
+			img: './src/img/price.jpg',
 		},
 		{
 			name: 'trio',

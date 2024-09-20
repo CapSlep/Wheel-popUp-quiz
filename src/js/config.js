@@ -252,8 +252,8 @@ const imageBase = baseUrl ?? landingUrl;
       {
         id: "26468781",
         name: "CinéPass DUO : abonnement de 6 mois",
-        miniImg: "./src/img/price.png",
-        images: ["./src/img/price.png"],
+        miniImg: "./src/img/price.jpg",
+        images: ["./src/img/price.jpg"],
       }
     ];
 

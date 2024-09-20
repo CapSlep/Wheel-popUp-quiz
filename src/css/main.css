@@ -3835,6 +3835,11 @@ video {
   max-width: 575px;
 }
 
+.features__list{
+  
+  padding-left: 20px;
+}
+
 .features__list-item{
   list-style: disc;
 }
@@ -3858,7 +3863,8 @@ video {
   color: var(--button-text-color);
   background-color: var(--main-color);
   text-transform: none;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .buy__button:after {
@@ -3893,7 +3899,7 @@ video {
   text-align: center;
   color: #fff;
   
-  padding: 2rem 0;
+  padding: 2rem 2rem;
 }
 
 .footer__text{

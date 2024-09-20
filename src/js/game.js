@@ -34,18 +34,18 @@ const modalWin = () => {
     modalContent.append(modalText);
   };
 
-  const useForm = false;
+  const useForm = true;
 
   const handlerClickOk = (e) => {
 
 
     closeGame();
-    enableFinalLoader();
     checkoutInit();
     if (useForm) {
+      enableLoader();
       setTimeout(() => {
-        openCheckout();
         timerInit();
+        openCheckout();
 
         disableLoader();
       }, 2680);
@@ -63,6 +63,7 @@ const modalWin = () => {
 
       // Проверяем, есть ли уже параметры в ссылке
       var separator = redirectLink.includes('?') ? '&' : '?';
+      enableFinalLoader();
 
       // Перенаправляем с новыми параметрами
       window.location.href = redirectLink + separator +
@@ -169,7 +170,7 @@ const fadeIn = (el, display) => {
 };
 const game = () => {
   window.screen.width;
-  let countAttempt = 2;
+  let countAttempt = 3;
   let counterBoxes = 6;
   let countClick = null;
   const boxesWrapper = document.createElement("div");
@@ -195,7 +196,7 @@ const game = () => {
     countClick++;
     countAttempt--;
     activeDiv.children[1].style.backgroundImage = `url(${pathImgBox.lidIOs})`;
-    if (2 === countClick) {
+    if (3 === countClick) {
       activeDiv.children[0].style.backgroundImage = `url(${pathImgBox.innerGift})`;
       setTimeout(modalWin, 1e3);
     } else setTimeout(modalLose, 2e3, countAttempt);
