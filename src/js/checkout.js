@@ -24,7 +24,7 @@ const checkoutInit = () => {
   // countryCodeHiddenField.value = dialCode;
 
   const checkoutMobileOffer = document.querySelector("#checkoutMobileOffer");
-  const checkoutPcOffer = document.querySelector("#checkoutPcOffer");
+  // const checkoutPcOffer = document.querySelector("#checkoutPcOffer");
   const checkoutCurrentPhoto = document.querySelector("#checkoutCurrentPhoto");
   const checkoutOfferName = document.querySelector("#checkoutOfferName");
   const checkoutOfferSize = document.querySelector("#checkoutOfferSize");
@@ -122,7 +122,7 @@ const checkoutInit = () => {
   checkoutDeliveryTimeAmount.innerText = cart.main.deliveryTime.amount;
 
   submitButton.innerText = cart.main.checkoutButton;
-  checkoutPcOffer.innerHTML = checkoutMobileOffer?.innerHTML;
+  // checkoutPcOffer.innerHTML = checkoutMobileOffer?.innerHTML;
 
   const sizeOptions = document.querySelectorAll('.size-option');
   const selectedSizeSpan = document.getElementById('selected-size');

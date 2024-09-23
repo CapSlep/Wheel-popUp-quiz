@@ -19,7 +19,7 @@ let nSeconds;
 
 const initObjs = () => {
   const hours = 0;
-  const minutes = 26;
+  const minutes = 5;
 
   const initSeconds = (hours * 60 * 60) + (minutes * 60);
 
@@ -47,7 +47,7 @@ const timerInit = () => {
   const minutesEl = document.querySelector("#timerMin");
   const secondsEl = document.querySelector("#timerSec");
 
-  document.querySelector("#timerText").innerText = window.__config.mainProduct.timer;
+  document.querySelector("#timerText").innerHTML = window.__config.mainProduct.timer;
 
   initObjs();
 

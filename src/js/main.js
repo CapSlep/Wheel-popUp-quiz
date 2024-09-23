@@ -29,6 +29,10 @@ function modalStartInit() {
   const startImage = document.getElementById("startImage");
   startImage.setAttribute("src", "./src/img/pop-up.png");
 
+  modalStart.addEventListener('click', () => {
+    modalStart.style.display = 'none';
+  });
+
   modalExits.forEach((exit) => {
     exit.addEventListener('click', () => {
       modalStart.style.display = 'none';

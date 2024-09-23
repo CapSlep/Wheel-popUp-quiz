@@ -451,6 +451,8 @@
                                                                     align-items: center;
                                                                     display: flex;
                                                                     padding: 5px 0;
+                                                                    justify-content: center;
+                                                                    align-items: center;
                                                                 ">
                                                             <div class="offer-photo">
                                                                 <img id="checkoutCurrentPhoto"
@@ -459,72 +461,73 @@
                                                             <div class="offer-details">
                                                                 <div id="checkoutOfferName" class="offer-name"></div>
                                                                 <div id="checkoutOfferSize" class="offer-name"></div>
-                                                                <div class="price mt-2">
-                                                                    <span id="checkoutOldPrice" style="
-                                                                                text-decoration: line-through;
-                                                                            "></span>
-                                                                    <span id="checkoutNewPrice" class="!tw-ml-2" style="
+                                                                <div class="price mt-2"></div>
+                                                                <span id="checkoutNewPrice" class="!tw-ml-2" style="
                                                                                 font-weight: bold;
+                                                                                font-size: 1.5rem;
                                                                                 color: red;
                                                                             "></span>
+                                                                <span id="checkoutOldPrice" style="
+                                                                                text-decoration: line-through;
+                                                                            "></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Fieldset for physical address -->
+                                            <fieldset class="shipping-method-block"
+                                                style="border-bottom: 1px solid rgb(225, 225, 225)">
+
+                                                <div class="row">
+                                                    <div class="col-md-4 pl-lg-0">
+                                                        <h3 id="deliveryHeader"></h3>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="leading-lines shipping-method-list">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label id="cityFieldLabel"
+                                                                            class="form-control-label moveLabel"
+                                                                            for="cityField"></label>
+                                                                        <input id="cityField" type="text"
+                                                                            class="form-control shippingAddressTwo"
+                                                                            name="city" required="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label id="addressFieldLabel"
+                                                                            class="form-control-label moveLabel"
+                                                                            for="addressField"></label>
+                                                                        <input id="addressField" type="text"
+                                                                            class="form-control shippingAddressTwo"
+                                                                            name="address" required="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label id="zipFieldLabel"
+                                                                            class="form-control-label moveLabel"
+                                                                            for="zipField"></label>
+                                                                        <input id="zipField" type="text"
+                                                                            class="form-control shippingAddressTwo"
+                                                                            name="zip" required="">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </fieldset>
 
-                                                <!-- Fieldset for physical address -->
-                                                <fieldset class="shipping-method-block"
-                                                    style="border-bottom: 1px solid rgb(225, 225, 225)">
-
-                                                    <div class="row">
-                                                        <div class="col-md-4 pl-lg-0">
-                                                            <h3 id="deliveryHeader"></h3>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="leading-lines shipping-method-list">
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-group">
-                                                                            <label id="cityFieldLabel"
-                                                                                class="form-control-label moveLabel"
-                                                                                for="cityField"></label>
-                                                                            <input id="cityField" type="text"
-                                                                                class="form-control shippingAddressTwo"
-                                                                                name="city" required="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-group">
-                                                                            <label id="addressFieldLabel"
-                                                                                class="form-control-label moveLabel"
-                                                                                for="addressField"></label>
-                                                                            <input id="addressField" type="text"
-                                                                                class="form-control shippingAddressTwo"
-                                                                                name="address" required="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-group">
-                                                                            <label id="zipFieldLabel"
-                                                                                class="form-control-label moveLabel"
-                                                                                for="zipField"></label>
-                                                                            <input id="zipField" type="text"
-                                                                                class="form-control shippingAddressTwo"
-                                                                                name="zip" required="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-
-                                                <fieldset class="shipping-method-block" style="
+                                            <fieldset class="shipping-method-block" style="
                                                             border-bottom: 1px
                                                                 solid
                                                                 rgb(
@@ -533,78 +536,78 @@
                                                                     225
                                                                 );
                                                         ">
-                                                    <div class="row">
-                                                        <div class="col-md-4 pl-lg-0">
-                                                            <h3 id="personalInfoHeader"></h3>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="leading-lines shipping-method-list">
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-group">
-                                                                            <label id="nameFieldLabel"
-                                                                                class="form-control-label moveLabel"
-                                                                                for="nameField">
-                                                                            </label>
-                                                                            <input id="nameField" type="text"
-                                                                                class="form-control shippingAddressTwo"
-                                                                                name="name" required="" />
-                                                                        </div>
+                                                <div class="row">
+                                                    <div class="col-md-4 pl-lg-0">
+                                                        <h3 id="personalInfoHeader"></h3>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="leading-lines shipping-method-list">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label id="nameFieldLabel"
+                                                                            class="form-control-label moveLabel"
+                                                                            for="nameField">
+                                                                        </label>
+                                                                        <input id="nameField" type="text"
+                                                                            class="form-control shippingAddressTwo"
+                                                                            name="name" required="" />
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-group">
-                                                                            <label id="familyFieldLabel"
-                                                                                class="form-control-label moveLabel"
-                                                                                for="familyField">
-                                                                            </label>
-                                                                            <input id="familyField" type="text"
-                                                                                class="form-control shippingAddressTwo"
-                                                                                name="family" required="" />
-                                                                        </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label id="familyFieldLabel"
+                                                                            class="form-control-label moveLabel"
+                                                                            for="familyField">
+                                                                        </label>
+                                                                        <input id="familyField" type="text"
+                                                                            class="form-control shippingAddressTwo"
+                                                                            name="family" required="" />
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-group">
-                                                                            <label id="phoneFieldLabel"
-                                                                                class="form-control-label moveLabel"
-                                                                                for="phoneField"></label>
-                                                                            <div
-                                                                                class="iti iti--separate-dial-code iti--show-flags">
-                                                                                <div class="iti__flag-container">
-                                                                                    <div class="iti__selected-flag">
-                                                                                        <div class="iti__flag iti__fr">
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="iti__selected-dial-code">
-                                                                                            +33
-                                                                                        </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label id="phoneFieldLabel"
+                                                                            class="form-control-label moveLabel"
+                                                                            for="phoneField"></label>
+                                                                        <div
+                                                                            class="iti iti--separate-dial-code iti--show-flags">
+                                                                            <div class="iti__flag-container">
+                                                                                <div class="iti__selected-flag">
+                                                                                    <div class="iti__flag iti__fr">
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="iti__selected-dial-code">
+                                                                                        +33
                                                                                     </div>
                                                                                 </div>
-                                                                                <input id="phoneField" type="tel"
-                                                                                    class="form-control shippingAddressTwo"
-                                                                                    name="phone" required=""
-                                                                                    autocomplete="off"
-                                                                                    data-intl-tel-input-id="0" style="
+                                                                            </div>
+                                                                            <input id="phoneField" type="tel"
+                                                                                class="form-control shippingAddressTwo"
+                                                                                name="phone" required=""
+                                                                                autocomplete="off"
+                                                                                data-intl-tel-input-id="0" style="
                                                                                             padding-left: 71px;
                                                                                         " />
-                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="form-group">
-                                                                            <label id="emailFieldLabel"
-                                                                                class="form-control-label moveLabel"
-                                                                                for="emailField">
-                                                                            </label>
-                                                                            <input id="emailField" type="email"
-                                                                                class="form-control shippingAddressTwo"
-                                                                                name="email" required="" />
-                                                                            <!-- <input
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <label id="emailFieldLabel"
+                                                                            class="form-control-label moveLabel"
+                                                                            for="emailField">
+                                                                        </label>
+                                                                        <input id="emailField" type="email"
+                                                                            class="form-control shippingAddressTwo"
+                                                                            name="email" required="" />
+                                                                        <!-- <input
                                                                                     id="emailField"
                                                                                     type="email"
                                                                                     style="
@@ -614,14 +617,14 @@
                                                                                     name="email"
                                                                                     required=""
                                                                                 /> -->
-                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </fieldset>
-                                                <fieldset class="shipping-method-block" style="
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="shipping-method-block" style="
                                                             border-bottom: 1px
                                                                 solid
                                                                 rgb(
@@ -630,38 +633,36 @@
                                                                     225
                                                                 );
                                                         ">
-                                                    <div class="row">
-                                                        <div class="col-md-4 pl-lg-0">
-                                                            <h3 id="paymentHeader"></h3>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="row leading-lines shipping-method-list">
-                                                                <div class="setSelected-Bg">
-                                                                    <div
-                                                                        class="form-check col-9 start-lines p-0 selected">
-                                                                        <input name="online_pay" type="radio"
-                                                                            class="form-check-input shipping-method-checkbox"
-                                                                            value="001" />
-                                                                        <label
-                                                                            class="form-check-label shipping-method-option"
-                                                                            for="shippingMethod-001-ade7bec383cacb5d44fcc51ffc">
-                                                                            <span id="paymentMethodLabel"
-                                                                                class="display-name"></span>
-                                                                        </label>
-                                                                    </div>
+                                                <div class="row">
+                                                    <div class="col-md-4 pl-lg-0">
+                                                        <h3 id="paymentHeader"></h3>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="row leading-lines shipping-method-list">
+                                                            <div class="setSelected-Bg">
+                                                                <div class="form-check col-9 start-lines p-0 selected">
+                                                                    <input name="online_pay" type="radio"
+                                                                        class="form-check-input shipping-method-checkbox"
+                                                                        value="001" />
+                                                                    <label
+                                                                        class="form-check-label shipping-method-option"
+                                                                        for="shippingMethod-001-ade7bec383cacb5d44fcc51ffc">
+                                                                        <span id="paymentMethodLabel"
+                                                                            class="display-name"></span>
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </fieldset>
-                                                <div class="row mx-0 mb-3">
-                                                    <div class="col-12 next-step-button ml-lg-auto px-lg-0">
-                                                        <div class="pt-lg-4 ml-lg-3">
-                                                            <button id="submitButton" type="submit"
-                                                                class="btn btn-primary btn-block submit-shipping" style="
+                                                </div>
+                                            </fieldset>
+                                            <div class="row mx-0 mb-3">
+                                                <div class="col-12 next-step-button ml-lg-auto px-lg-0">
+                                                    <div class="pt-lg-4 ml-lg-3">
+                                                        <button id="submitButton" type="submit"
+                                                            class="btn btn-primary btn-block submit-shipping" style="
                                                                         font-weight: 900;
                                                                     "></button>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -671,14 +672,15 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-sm-4 shipment-order-summary">
-                        <div id="checkoutPcOffer" class="non-mobile-offer"></div>
+                <div class="col-sm-4 shipment-order-summary">
+                    <!-- <div id="checkoutPcOffer" class="non-mobile-offer"></div> -->
 
 
 
-                        <!-- SIZE SELECTION BLOCK -->
-                        <!-- <div class="size-selector">
+                    <!-- SIZE SELECTION BLOCK -->
+                    <!-- <div class="size-selector">
                             <div class="size-label">
                                 Size
                                 <span id="selected-size">M</span>
@@ -701,70 +703,68 @@
                                 </button>
                             </div>
                         </div> -->
-                        <!-- SIZE SELECTION BLOCK -->
+                    <!-- SIZE SELECTION BLOCK -->
 
 
 
-                        <div class="card">
-                            <div class="card-header">
-                                <h2 id="checkoutTotalTitle" class="card-header-custom mb-2"></h2>
-                                <div class="card-body order-total-summary">
-                                    <div class="row leading-lines shipping-item">
-                                        <div class="col-6 start-lines">
-                                            <p class="order-receipt-label">
-                                                <span id="checkoutDelivery"></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-6 end-lines">
-                                            <p class="text-right">
-                                                <span id="checkoutDeliveryTime" class="shipping-total-time"></span>
-                                            </p>
-                                        </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 id="checkoutTotalTitle" class="card-header-custom mb-2"></h2>
+                            <div class="card-body order-total-summary">
+                                <div class="row leading-lines shipping-item">
+                                    <div class="col-6 start-lines">
+                                        <p class="order-receipt-label">
+                                            <span id="checkoutDelivery"></span>
+                                        </p>
                                     </div>
-                                    <div class="row leading-lines shipping-item">
-                                        <div class="col-6 start-lines">
-                                            <p class="order-receipt-label">
-                                                <span id="checkoutTotalSubtotalTitle"></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-6 end-lines">
-                                            <p class="text-right">
-                                                <span id="checkoutTotalSubtotalAmount"
-                                                    class="shipping-total-cost"></span>
-                                            </p>
-                                        </div>
+                                    <div class="col-6 end-lines">
+                                        <p class="text-right">
+                                            <span id="checkoutDeliveryTime" class="shipping-total-time"></span>
+                                        </p>
                                     </div>
-                                    <div class="row leading-lines shipping-item">
-                                        <div class="col-6 start-lines">
-                                            <p class="order-receipt-label">
-                                                <span id="checkoutTotalDeliveryTitle"></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-6 end-lines">
-                                            <p class="text-right">
-                                                <span id="checkoutTotalDeliveryAmount"
-                                                    class="shipping-total-cost"></span>
-                                            </p>
-                                        </div>
+                                </div>
+                                <div class="row leading-lines shipping-item">
+                                    <div class="col-6 start-lines">
+                                        <p class="order-receipt-label">
+                                            <span id="checkoutTotalSubtotalTitle"></span>
+                                        </p>
                                     </div>
-                                    <div class="row leading-lines">
-                                        <div class="col-6 start-lines">
-                                            <p class="order-receipt-label boldTitle">
-                                                <span id="checkoutTotalTotalTitle"></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-6 end-lines">
-                                            <p class="text-right">
-                                                <span id="checkoutTotalTotalAmount" class="grand-total-sum"></span>
-                                            </p>
-                                        </div>
+                                    <div class="col-6 end-lines">
+                                        <p class="text-right">
+                                            <span id="checkoutTotalSubtotalAmount" class="shipping-total-cost"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row leading-lines shipping-item">
+                                    <div class="col-6 start-lines">
+                                        <p class="order-receipt-label">
+                                            <span id="checkoutTotalDeliveryTitle"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-6 end-lines">
+                                        <p class="text-right">
+                                            <span id="checkoutTotalDeliveryAmount" class="shipping-total-cost"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row leading-lines">
+                                    <div class="col-6 start-lines">
+                                        <p class="order-receipt-label boldTitle">
+                                            <span id="checkoutTotalTotalTitle"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-6 end-lines">
+                                        <p class="text-right">
+                                            <span id="checkoutTotalTotalAmount" class="grand-total-sum"></span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
+        </div>
+        </form>
 
         </div>
     </section>
