@@ -43,7 +43,7 @@ const initObjs = () => {
 };
 
 const timerInit = () => {
-  const hoursEl = document.querySelector("#timerHour");
+  // const hoursEl = document.querySelector("#timerHour");
   const minutesEl = document.querySelector("#timerMin");
   const secondsEl = document.querySelector("#timerSec");
 
@@ -52,7 +52,7 @@ const timerInit = () => {
   initObjs();
 
   const setNumbers = () => {
-    hoursEl.innerText = formatNumber(nHours);
+    // hoursEl.innerText = formatNumber(nHours);
     minutesEl.innerText = formatNumber(nMinutes);
     secondsEl.innerText = formatNumber(nSeconds);
   };

@@ -609,7 +609,7 @@ window.onload = () => {
 
       const pr = lsGetSelectedProduct();
       let adRedirectName = document.getElementById('checkoutOfferName').innerText;
-      let adRedirectImg = checkoutCurrentPhoto.checkoutCurrentPhoto.src;
+      let adRedirectImg = document.getElementById('checkoutCurrentPhoto').src;
 
       // Get country code
 

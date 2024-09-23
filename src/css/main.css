@@ -3784,7 +3784,7 @@ video {
 	font-size: 20px;
 	left: calc(50% - 5px);
 }
-#timerHour:after {
+/* #timerHour:after {
 	content: 'h';
 }
 #timerMin:after {
@@ -3792,7 +3792,7 @@ video {
 }
 #timerSec:after {
 	content: 's';
-}
+} */
 
 /* END Timer Section */
 
@@ -3802,7 +3802,7 @@ video {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  margin: 15px 0;
+  margin: 15px 0 2rem;
 }
 
 .description__container h2{

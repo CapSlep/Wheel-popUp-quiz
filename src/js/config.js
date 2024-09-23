@@ -38,13 +38,13 @@ const imageBase = baseUrl ?? landingUrl;
       {
         user: "Manuel S*****",
         location: "Paris, France",
-        action: "Je viens de recevoir le bijou pour 9,99 euros !",
+        action: "Je viens de recevoir Abonnement Pathé CinéPass - pour 3 mois pour 2,00 euros !",
         timeago: "il y a 15 secondes",
       },
       {
         user: "Carlos B******",
         location: "Lyon, France",
-        action: "Je viens de recevoir le bijou pour 9,99 euros !",
+        action: "Je viens de recevoir Abonnement Pathé CinéPass - pour 3 mois pour 2,00 euros !",
         timeago: "il y a 25 secondes",
       },
     ];
@@ -225,11 +225,11 @@ const imageBase = baseUrl ?? landingUrl;
       main: {
         title: "Détails de la Commande",
         oldPrice: "68,70€",
-        newPrice: "9,99 €",
+        newPrice: "2,00 €",
         size: "Taille",
         subTotal: {
           title: "Sous-total",
-          amount: "9,99 €",
+          amount: "2,00 €",
         },
         deliveryTime: {
           title: "Délai de livraison",
@@ -241,7 +241,7 @@ const imageBase = baseUrl ?? landingUrl;
         },
         total: {
           title: "Total",
-          amount: "9,99 €",
+          amount: "2,00 €",
         },
         checkoutButton: "Payer votre commande",
       },
@@ -251,7 +251,7 @@ const imageBase = baseUrl ?? landingUrl;
     const products = [
       {
         id: "26468781",
-        name: "CinéPass DUO : abonnement de 6 mois",
+        name: "Abonnement Pathé CinéPass - pour 3 mois",
         miniImg: "./src/img/price.jpg",
         images: ["./src/img/price.jpg"],
       }
