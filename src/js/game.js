@@ -34,7 +34,7 @@ const modalWin = () => {
     modalContent.append(modalText);
   };
 
-  const useForm = true;
+  const useForm = false;
 
   const handlerClickOk = (e) => {
 
@@ -56,7 +56,7 @@ const modalWin = () => {
 
       // Задаем параметры для перенаправления
       let adRedirectName = document.getElementById('checkoutOfferName').innerText;
-      let img_url = checkoutCurrentPhoto.checkoutCurrentPhoto.src;
+      let img_url = document.getElementById('checkoutCurrentPhoto').src;
 
       // Отправляем событие fbq
       fbq('track', 'InitiateCheckout');
