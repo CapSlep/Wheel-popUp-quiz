@@ -27,7 +27,7 @@ const imageBase = baseUrl ?? landingUrl;
       newPrice: "",
       selectText: "",
       coupon: "",
-      timer: "Tu turno para la compra está reservado por 5 minutos.<br><br> Cette semaine, vous ne pouvez commander qu'un seul produit à un prix promotionnel.",
+      timer: "Votre tour pour l'achat est réservé pendant 5 minutes.<br><br>Cette semaine, vous ne pouvez commander qu'un seul produit à un prix promotionnel.",
       text: `
   Félicitations !<br><br>
   Vous avez participé à la promotion Stanley : vous avez la chance d'acheter le thermos STANLEY QUENCHER H2.0 avec moule à glace pour seulement <b>37$</b> !
